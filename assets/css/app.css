@@ -126,8 +126,8 @@ ul {
   ul li {
     display: flex;
     align-items: center; }
-    ul li span{
-        font-family: 'Yellowtail', cursive;
+    ul li a#company{
+        text-decoration: underline
         }
     ul li:nth-child(1) {
       animation: fade 1.5s ease-out .1s;
