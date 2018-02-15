@@ -25,10 +25,12 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: radial-gradient(#72216B, #001C2E, #FC4C7C);
+  /* background-image: radial-gradient(#72216B, #001C2E, #FC4C7C); */
+  /* background-image: radial-gradient(#AE1AA1, #002842, #001F56) */
+  background-image: radial-gradient(#AE1AA1, #002842, #001F56);
   background-size: 200% 200%;
   background-position: 0 0;
-  animation: border 5s linear infinite;}
+  animation: border 30s linear infinite;}
   body:after {
     content: "";
     background: rgba(48, 50, 57, 0.6);
