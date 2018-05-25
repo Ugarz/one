@@ -48,6 +48,8 @@
       <li><a rel="me" title="Follow me on Twitter" href="https://twitter.com/ugarz">🐦</a></li>
       <li><a rel="me" title="Contact me via Email" href="mailto:ugo.arzur@protonmail.com">👋🏻</a></li>
     </ul>
+    <h3>List of projects</h3>
+    <ul class="projects"></ul>
   </div>
   <!--<span class="again" onclick="history.go(0)" title="Reload page">ANIMATE !</span>-->
   <script>
@@ -59,6 +61,30 @@
     ga('create', 'UA-25820434-3', 'auto');
     ga('send', 'pageview');
 
+  </script>
+  <script>
+    const owner = 'Ugarz'
+    const url = `https://api.github.com/users/${owner}/repos`
+    const informations = []
+    fetch(url)
+      .then(res => res.json())
+      .then(response => response.map(repo => ({
+        name: repo.name,
+        fullName: repo.fullName,
+        description: repo.description,
+        clone_url: repo.clone_url,
+        forks: repo.forks,
+        hompage: repo.hompage,
+        html_url: repo.html_url,
+        owner: repo.owner,
+        stargazers_count: repo.stargazers_count,
+        pushed_at: repo.pushed_at,
+        created_at: repo.created_at,
+        updated_at: repo.updated_at
+      })))
+      .then(formatedResponse => informations.push(formatedResponse))
+      .catch(e => console.log('Oopsy, error fetching repositories', e))
+      console.log(informations)
   </script>
 </body>
 
