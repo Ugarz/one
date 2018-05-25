@@ -113,7 +113,7 @@ h2 {
       h2 a:hover span:nth-child(3) {
         transform: translateX(-1vw); }
 
-ul {
+ul.head {
   font-size: 2vw;
   line-height: 4vw;
   color: #aaadba;
@@ -125,45 +125,45 @@ ul {
   justify-content: flex-end;
   transform: rotate(-1deg);
   animation: fade 1.5s ease-out 0s; }
-  ul li {
+  ul.head li {
     display: flex;
     align-items: center; }
-    ul li a#company{
+    ul.head li a#company{
         text-decoration: underline
         }
-    ul li:nth-child(1) {
+    ul.head li:nth-child(1) {
       animation: fade 1.5s ease-out .1s;
       letter-spacing: 0.125vw; }
-      ul li:nth-child(1):after {
+      ul.head li:nth-child(1):after {
         content: "";
         margin-left: 1vw;
         width: 0.5vw;
         height: 0.5vw;
         border-radius: 50%;
         background-color: #868a97; }
-      ul li:nth-child(1) a {
+      ul.head li:nth-child(1) a {
         margin-left: 0.5vw; }
-        ul li:nth-child(1) a:hover, ul li:nth-child(1) a:focus {
+        ul.head li:nth-child(1) a:hover, ul.head li:nth-child(1) a:focus {
           color: white; }
-    ul li:nth-child(2) {
+    ul.head li:nth-child(2) {
       animation: fade 1.5s ease-out .2s; }
-    ul li:nth-child(3) {
+    ul.head li:nth-child(3) {
       animation: fade 1.5s ease-out .3s; }
-    ul li:nth-child(4) {
+    ul.head li:nth-child(4) {
       animation: fade 1.5s ease-out .4s; }
-    ul li:nth-child(5) {
+    ul.head li:nth-child(5) {
       animation: fade 1.5s ease-out .5s; }
-      ul li:nth-child(5) a {
+      ul.head li:nth-child(5) a {
         animation: hi 3s linear -.5s 1; }
-    ul li a {
+    ul.head li a {
       color: #d5d8e3; }
-    ul li:not(:first-child) {
+    ul.head li:not(:first-child) {
       margin-left: 1vw; }
-      ul li:not(:first-child) a {
+      ul.head li:not(:first-child) a {
         transform: rotate(9deg);
         transition: transform 0.125s cubic-bezier(0.5, 0, 0.25, 2);
         font-style: normal; }
-        ul li:not(:first-child) a:hover, ul li:not(:first-child) a:focus {
+        ul.head li:not(:first-child) a:hover, ul.head li:not(:first-child) a:focus {
           transform: scale(1.25) rotate(9deg); }
 
 .again {
@@ -259,3 +259,7 @@ ul {
   .again {
     font-size: 4vw;
     line-height: 5vw; } }
+
+    .hoverLink{
+  color: white
+}

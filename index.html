@@ -42,7 +42,7 @@
         <span><em>Ugarz</em></span>
       </a>
     </h2>
-    <ul>
+    <ul class="head">
       <li><strong>Developer at <a id="company" href="https://morning.com/">Morning</a></strong></li>
       <li><span>Junior dev 4 life</span></li>
       <li><a rel="me" title="Follow me on Twitter" href="https://twitter.com/ugarz">🐦</a></li>
@@ -62,30 +62,46 @@
     ga('send', 'pageview');
 
   </script>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous">
+  </script>
   <script>
     const owner = 'Ugarz'
     const url = `https://api.github.com/users/${owner}/repos`
     const informations = []
     fetch(url)
       .then(res => res.json())
-      .then(response => response.map(repo => ({
-        name: repo.name,
-        fullName: repo.fullName,
-        description: repo.description,
-        clone_url: repo.clone_url,
-        forks: repo.forks,
-        hompage: repo.hompage,
-        html_url: repo.html_url,
-        owner: repo.owner,
-        stargazers_count: repo.stargazers_count,
-        pushed_at: repo.pushed_at,
-        created_at: repo.created_at,
-        updated_at: repo.updated_at
-      })))
-      .then(formatedResponse => informations.push(formatedResponse))
+      .then(response => {
+        console.log('response', response)
+        return response.map(repo => ({
+          name: repo.name,
+          fullName: repo.fullName,
+          description: repo.description,
+          clone_url: repo.clone_url,
+          forks: repo.forks,
+          hompage: repo.hompage,
+          html_url: repo.html_url,
+          owner: repo.owner,
+          stargazers_count: repo.stargazers_count,
+          pushed_at: repo.pushed_at,
+          created_at: repo.created_at,
+          updated_at: repo.updated_at
+        }))
+      })
+      .then(formatedResponse => {
+        console.log(formatedResponse)
+        formatedResponse.map(re => informations.push(re))
+      })
+      .then(() => {
+        informations.map(i => $( ".projects" )
+          .append( `<li>${i.name} - <a class="hoverLink" href="${i.html_url}" target="_blank">Voir le projet</a></li>`))
+      })
       .catch(e => console.log('Oopsy, error fetching repositories', e))
-      console.log(informations)
+
   </script>
+  
 </body>
 
 </html>
