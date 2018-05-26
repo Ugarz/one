@@ -94,7 +94,8 @@
         //   item.fadeIn(2000)
         // });
         informations.map(i => {
-          // if(i.description === null) return;
+          const ignore = ['pad', 'p9o']
+          if(ignore.includes(i.name)) return;
           return $( ".projects" )
             .append(
               $(`
