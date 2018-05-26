@@ -1,0 +1,55 @@
+@media all and (max-width: 640px) {
+    h1 {
+      font-size: 6vw;
+      line-height: 7.5vw;
+      padding-left: 5vw; }
+  
+    ul {
+      font-size: 4vw;
+      line-height: 6.5vw;
+      padding-right: 3.5vw; }
+      ul li:first-child {
+        width: 100%;
+        justify-content: flex-end;
+        transform: translateX(0.5vw); }
+        ul li:first-child:after {
+          display: none; }
+        ul li:first-child a {
+          margin-left: 1vw; }
+      ul li:not(:first-child) {
+        transform: translateX(-1vw); }
+        ul li:not(:first-child) a {
+          margin-left: 2vw; }
+  
+    .again {
+      position: fixed;
+      bottom: 1em;
+      align-content: center;
+      font-size: 1em;
+      line-height: 1.3em;
+      background-color: white;
+      border-radius: 3px;
+      box-shadow: 5px 5px 3px #4e505a;
+      padding: .5em; }
+  
+    div.projects-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    ul.projects {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    ul.projects a {
+      width: 100%;
+    }
+    ul.projects li.card {
+      box-shadow: 5px 5px 3px #aaadba;
+    }
+    ul.projects li.card a {
+      
+    }
+  }
+  
