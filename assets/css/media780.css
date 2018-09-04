@@ -1,0 +1,38 @@
+@media all and (max-width: 780px) {
+    body{
+      background-size: 200% 200%;
+      animation: border 10s linear infinite;
+    }
+    header {
+      margin-top: 2em;
+    }
+    h1 {
+      font-size: 6vw;
+      line-height: 7.5vw;
+      padding-left: 5vw; }
+  
+    ul.projects div.card header {
+        margin: 0;
+    }
+    div.projects-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    ul.projects {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    ul.projects a {
+      width: 100%;
+    }
+    ul.projects li.card {
+      box-shadow: 5px 5px 3px #aaadba;
+    }
+    ul.working-at li {
+      font-size: 2em;
+      align-self: center;
+    }
+  }
+    

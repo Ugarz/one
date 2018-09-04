@@ -1,65 +1,131 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8" />
-  <title>Ugo Arzur</title>
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
-  <meta name="author" content="Ugo Arzur" />
-  <meta name="robots" content="All" />
-  <meta name="revisit-after" content="1 month">
-  <meta name="rating" content="General">
-  <meta name="Content-language" content="english">
-  <meta name="description" content="Homepage for Ugo Arzur, developer Javascript. Maker." />
-  <meta name=”keywords” content="developer, javascript, coder, code, react, microservices, node, nodejs, toulouse" />
-  <meta name="theme-color"content="#303239" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Ugo Arzur" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@ArzurUgo" />
-  <meta name="twitter:creator" content="@ArzurUgo" />
-  <meta name="twitter:url" property="og:url" content="http://ugoarzur.fr" />
-  <meta name="twitter:image:width" content="1000" />
-  <meta name="twitter:image:height" content="1000" />
-  <meta name="twitter:image" property="og:image" content="http://ugoarzur.fr/img/preview.png" />
-  <meta name="twitter:title" property="og:title" content="Ugo Arzur" />
-  <meta name="twitter:description" property="og:description" content="Personal homepage of Ugo Arzur, maker." />
-  <link rel="stylesheet" type="text/css" href="assets/css/app.css" media="screen" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700i,800i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ugo Arzur</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+    <meta name="author" content="Ugo Arzur" />
+    <meta name="robots" content="All" />
+    <meta name="revisit-after" content="1 month">
+    <meta name="rating" content="General">
+    <meta name="Content-language" content="english">
+    <meta name="description" content="Homepage for Ugo Arzur, developer Javascript. Maker." />
+    <meta name=”keywords” content="developer, javascript, coder, code, react, microservices, node, nodejs, toulouse" />
+    <meta name="theme-color"content="#303239" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ugo Arzur" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ArzurUgo" />
+    <meta name="twitter:creator" content="@ArzurUgo" />
+    <meta name="twitter:url" property="og:url" content="http://ugoarzur.fr" />
+    <meta name="twitter:image:width" content="1000" />
+    <meta name="twitter:image:height" content="1000" />
+    <meta name="twitter:image" property="og:image" content="http://ugoarzur.fr/img/preview.png" />
+    <meta name="twitter:title" property="og:title" content="Ugo Arzur" />
+    <meta name="twitter:description" property="og:description" content="Personal homepage of Ugo Arzur, maker." />
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css" media="screen" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700i,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail" rel="stylesheet">
+  </head>
 
-<body>
-  <div>
-    <div id="particles-js"></div>
-    <h1 title="Developer Javascript (react, nodejs)">
-      <span><strong>Reactive Developer</strong></span>
-    </h1>
-    <h2 title="Follow me on twitter">
-      <a href="https://twitter.com/ArzurUgo">
-        <span><em>Ugarz</em></span>
-        <span><em>Ugarz</em></span>
-        <span><em>Ugarz</em></span>
-      </a>
-    </h2>
-    <ul>
-      <li><strong>Developer at <a id="company" href="https://morning.com/">Morning</a></strong></li>
-      <li><span>Junior dev 4 life</span></li>
-      <li><a rel="me" title="Follow me on Twitter" href="https://twitter.com/ArzurUgo">🐦</a></li>
-      <li><a rel="me" title="Contact me via Email" href="mailto:ugo.arzur@protonmail.com">👋🏻</a></li>
-    </ul>
-  </div>
-  <!--<span class="again" onclick="history.go(0)" title="Reload page">ANIMATE !</span>-->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <body>
+    <header>
+        <h1 title="Developer Javascript (react, nodejs)">Reactive Web Developer</h1>
+        <h2 title="Follow me on twitter">
+          <a href="https://twitter.com/ArzurUgo">
+            <span><em>Ugarz</em></span>
+            <span><em>Ugarz</em></span>
+            <span><em>Ugarz</em></span>
+          </a>
+        </h2>
+        <ul class="working-at">
+          <li>Developer at <a id="company" href="https://morning.com/">Morning</a></li>
+          <li><a rel="me" title="Follow me on Twitter" href="https://twitter.com/ArzurUgo">🐦</a></li>
+          <li><a rel="me" title="Contact me via Email" href="mailto:ugo.arzur@protonmail.com">👋🏻</a></li>
+        </ul>
+        <span class="again" onclick="history.go(0)" title="Reload page">ANIMATE !</span>
+    </header>
 
-    ga('create', 'UA-25820434-3', 'auto');
-    ga('send', 'pageview');
+    <main class="projects-wrapper">
+        <h3>Some of my projects</h3>
+        <ul class="projects"></ul>
+    </main>
 
-  </script>
-</body>
+    <!-- analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+      ga('create', 'UA-25820434-3', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+    <!-- Import jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+      crossorigin="anonymous">
+    </script>
+    
+    <!-- Repo -->
+    <script>
+      const owner = 'Ugarz'
+      const url = `https://api.github.com/users/${owner}/repos`
+      const informations = []
+      console.log('Oh hello you ! nice to meet you, please come visit my console, come in !')
+      function DOMfeeder(){
+        informations.map(i => {
+          const ignore = ['pad', 'p9o']
+          if(ignore.includes(i.name)) return;
+          return $( ".projects" )
+            .append(
+              $(`
+                <a href="${i.html_url}" target="_blank">
+                  <div class="card">
+                    <header>
+                      <h4 class="fullname">&#9874; ${i.fullName}</h4>
+                      <img class="avatar" src="${i.owner.avatar_url}"/>
+                    </header>
+                    <p class="description">${i.description}</p>
+                    <span class="stars">${i.stargazers_count}&#9733;</span>
+                    <span class="language">${i.language}</span>
+                  </div>
+                </a>
+              `)
+            )
+          }
+        );
+      }
+
+      // Formatting response
+      function formatResponse(response){
+        return response.map(repo => ({
+            name: repo.name,
+            fullName: repo.full_name,
+            description: repo.description,
+            clone_url: repo.clone_url,
+            forks: repo.forks,
+            hompage: repo.homepage,
+            html_url: repo.html_url,
+            owner: repo.owner,
+            stargazers_count: repo.stargazers_count,
+            pushed_at: repo.pushed_at,
+            created_at: repo.created_at,
+            updated_at: repo.updated_at,
+            language: repo.language
+          }))
+      }
+      
+      fetch(url)
+        .then(res => res.json())
+        .then(response => formatResponse(response))
+        .then(formatedResponse => formatedResponse.map(el => informations.push(el)))
+        .then(() => DOMfeeder())
+        .catch(e => console.log('Oopsy, error fetching repositories', e))
+
+    </script>
+  </body>
 </html>
