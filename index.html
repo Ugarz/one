@@ -41,7 +41,7 @@
         </h2>
         <ul class="working-at">
           <li>Developer at <a id="company" href="https://morning.com/">Morning</a></li>
-          <li><a rel="me" title="Follow me on Twitter" href="https://twitter.com/ugarz">🐦</a></li>
+          <li><a rel="me" title="Follow me on Twitter" href="https://twitter.com/ArzurUgo">🐦</a></li>
           <li><a rel="me" title="Contact me via Email" href="mailto:ugo.arzur@protonmail.com">👋🏻</a></li>
         </ul>
         <span class="again" onclick="history.go(0)" title="Reload page">ANIMATE !</span>
@@ -75,24 +75,8 @@
       const owner = 'Ugarz'
       const url = `https://api.github.com/users/${owner}/repos`
       const informations = []
-
+      console.log('Oh hello you ! nice to meet you, please come visit my console, come in !')
       function DOMfeeder(){
-        console.log(informations)
-        // informations.map(i => {
-        //   console.log(i)
-        //   const item = $(`
-        //         <a class="hoverLink" href="${i.html_url}" target="_blank">
-        //           <div class="card">
-        //             <h4 class="fullname">&#9874; ${i.fullName}</h4>
-        //             <p class="description">${i.description}</p>
-        //             <span class="stars">${i.stargazers_count}&#9733;</span>
-        //           </div>
-        //         </a>
-        //       `).hide();
-        //   console.log(item)
-        //   $( "ul.projects" ).append(item)
-        //   item.fadeIn(2000)
-        // });
         informations.map(i => {
           const ignore = ['pad', 'p9o']
           if(ignore.includes(i.name)) return;
@@ -118,7 +102,6 @@
 
       // Formatting response
       function formatResponse(response){
-        console.log(response)
         return response.map(repo => ({
             name: repo.name,
             fullName: repo.full_name,
