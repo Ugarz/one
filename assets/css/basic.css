@@ -165,6 +165,7 @@ ul.working-at {
     display: flex;
     flex-direction: column;
     margin: .3em;
+    flex: 1 1 auto;
   }
   ul.projects p.description {
       color: #868a97;
