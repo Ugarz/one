@@ -24,6 +24,7 @@
   } */
   ul.projects a {
     width: 100%;
+    /* flex: 1 1 auto; */
   }
   ul.projects li.card {
     box-shadow: 5px 5px 3px #aaadba;
