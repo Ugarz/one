@@ -6,6 +6,9 @@ import Layout from '../components/Layout/Layout'
 import Header from '../components/Header/Header'
 
 import "../resources/scss/global.scss"
+import "../resources/scss/basic.scss"
+import "../resources/scss/media780.scss"
+import "../resources/scss/animations.scss"
 
 export default class extends React.Component {
     static async getInitialProps() {
