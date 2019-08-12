@@ -1,0 +1,21 @@
+ul.projects div.card {
+    box-shadow: 5px 5px 3px #333b52;
+    padding: .7em;
+    background-color: white;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+  }
+  ul.projects div.card header {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+  ul.projects div.card:hover {
+    background-color:#e0e1e7;
+  }
+  ul.projects div.card h4:hover {
+    text-decoration: underline;
+  }
+  

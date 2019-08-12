@@ -4,8 +4,8 @@
   "description": "A simple website",
   "main": "index.js",
   "scripts": {
-    "start": "next",
-    "dev": "next dev",
+    "start": "NODE_ENV=production node server.js",
+    "dev": "node server.js",
     "build": "next build"
   },
   "repository": {

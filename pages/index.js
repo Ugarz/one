@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Providers from '../resources/helpers/providers'
 import Layout from '../components/Layout/Layout'
 import Header from '../components/Header/Header'
+import Github from '../components/Github/Github'
 
 import "../resources/scss/global.scss"
 import "../resources/scss/basic.scss"
@@ -11,36 +12,19 @@ import "../resources/scss/media780.scss"
 import "../resources/scss/animations.scss"
 
 export default class extends React.Component {
-    static async getInitialProps() {
-        const res = await fetch('https://api.github.com/users/Ugarz/repos')
-        const projects = await res.json()        
-        return { projects: Providers.formatGithubResponse(projects) }
-    }
+    // static async getInitialProps() {
+    //     const res = await fetch('https://api.github.com/users/Ugarz/repos')
+    //     const projects = await res.json()
+    //     const projectsCleaned = Providers.formatGithubResponse(projects)
+    //     return projectsCleaned;
+    // }
     render() {
         return <Layout title="Latest News">
             <Header />
             <main className="projects-wrapper">
                 <h3>Some of my projects</h3>
-                <ul className="projects"></ul>
+                {/* <Github users={this.props.users} /> */}
             </main>
-            <ul>
-                { this.props.projects.map((project, index) => (
-                    <li key={index}>
-                        <a href={project.url} target="_blank">
-                            <div className="card">
-                                <header>
-                                <h4 className="fullname">&#9874; {project.fullName}</h4>
-                                <img className="avatar" src={project.owner.avatar_url}/>
-                                </header>
-                                <p className="description">{project.description}</p>
-                                <span className="stars">{project.stargazers_count}&#9733;</span>
-                                <span className="language">{project.language}</span>
-                            </div>
-                        </a>
-                    </li>
-                )) }
-            </ul>
-  
             <style jsx>{`
             h1 {
                 font-weight: 300;
