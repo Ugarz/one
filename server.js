@@ -33,10 +33,7 @@ app.prepare().then(() => {
         default:
             break;
     }
-    if(req.method === 'POST'){
-    } else {
-        console.log('GET', query);
-    }
+
   }).listen(3000, err => {
     if (err) throw err
     console.log('> Ready on http://localhost:3000')

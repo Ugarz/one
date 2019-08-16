@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 class Error extends React.Component {
   static getInitialProps({ res, err }) {
@@ -10,7 +11,9 @@ class Error extends React.Component {
     return (
       <div>
         <h1>Whoops !</h1>
-        <a href="/">Take me away</a>
+        <Link href="/">
+          <a>Take me away</a>
+        </Link>
         <p>
             {this.props.statusCode
             ? `An error ${this.props.statusCode} occurred on server`

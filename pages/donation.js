@@ -1,4 +1,4 @@
-import 'isomorphic-fetch'
+import 'isomorphic-unfetch'
 import Link from 'next/link'
 
 import Providers from '../resources/helpers/providers'

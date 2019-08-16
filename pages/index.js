@@ -1,10 +1,7 @@
-import 'isomorphic-fetch'
-import Link from 'next/link'
-
 import Providers from '../resources/helpers/providers'
-import Layout from '../components/Layout/Layout'
-import Header from '../components/Header/Header'
-import Github from '../components/Github/Github'
+import Layout from '../components/Layout'
+import Header from '../components/Header'
+import Github from '../components/Github'
 
 import "../resources/scss/global.scss"
 import "../resources/scss/basic.scss"
@@ -12,18 +9,12 @@ import "../resources/scss/media780.scss"
 import "../resources/scss/animations.scss"
 
 export default class extends React.Component {
-    // static async getInitialProps() {
-    //     const res = await fetch('https://api.github.com/users/Ugarz/repos')
-    //     const projects = await res.json()
-    //     const projectsCleaned = Providers.formatGithubResponse(projects)
-    //     return projectsCleaned;
-    // }
-    render() {
+      render() {
         return <Layout title="Latest News">
             <Header />
             <main className="projects-wrapper">
                 <h3>Some of my projects</h3>
-                {/* <Github users={this.props.users} /> */}
+                <Github />
             </main>
             <style jsx>{`
             h1 {

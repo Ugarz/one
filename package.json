@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=production node server.js",
-    "dev": "node server.js",
+    "prestart": "npm run build",
+    "dev": "./node_modules/.bin/nodemon server.js",
     "build": "next build"
   },
   "repository": {
@@ -20,10 +21,13 @@
   "homepage": "https://github.com/Ugarz/one#readme",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
-    "isomorphic-fetch": "^2.2.1",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "^8.0.3",
     "node-sass": "^4.11.0",
     "react": "^16.8.3",
     "react-dom": "^16.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
