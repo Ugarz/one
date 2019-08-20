@@ -15,7 +15,6 @@ const url = 'https://api.github.com/users/Ugarz/repos'
 // const url = 'https://reqres.in/api/users?page=2'
 
 const Github = props => {
-	console.log('props', props)
 	const isEmpty =
 		Array.isArray(props.projects) && Object.keys(props.projects) == 0
 	return (
@@ -23,11 +22,11 @@ const Github = props => {
 			<h1>Some of my projects</h1>
 			{props.projects && !isEmpty && (
 				<ul className="projects">
-					{props.projects.data.map((p, k) => (
+					{props.projects.map((p, k) => (
 						<li key={k}>
 							<div className="card">
-								<header>{p.first_name}</header>
-								{p.email}
+								<header>{p.name}</header>
+								{p.url}
 							</div>
 						</li>
 					))}
@@ -65,17 +64,10 @@ Home.getInitialProps = async ({ req }) => {
 	const res = await fetch(url)
 	if (res.status == 200) {
 		projects = await res.json()
-		return {
-			projects,
-		}
+		return { projects }
 	}
 	console.error('Whoops, could not fetch projects from Github!')
-	// console.log(':: Projects fetched', projects)
-	// const projectsCleaned = Providers.formatGithubResponse(projects)
-	// console.log(':: Cleaned projects', projectsCleaned)
-	return {
-		projects,
-	}
+	return { projects }
 }
 
 function Home(props) {

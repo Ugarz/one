@@ -1,54 +1,53 @@
 import Link from 'next/link'
-import fetch from 'isomorphic-unfetch'
-// const url = 'https://api.github.com/users/Ugarz/repos'
-const url = 'https://reqres.in/api/users?page=2'
 
-async function Github({ projects }) {
-	console.log(projects)
+const Github = props => {
+	const isEmpty =
+		Array.isArray(props.projects) && Object.keys(props.projects) == 0
 	return (
 		<div>
-			<ul>
-				{projects.data.map(p => (
-					<li>{p.email}</li>
-				))}
-			</ul>
+			<h1>Some of my projects</h1>
+			{props.projects && !isEmpty && (
+				<ul className="projects">
+					{props.projects.data.map((p, k) => (
+						<a key={k} href={p.html_url} target="_blank">
+							<div class="card">
+								<header>
+									<h4 class="fullname">&#9874; {p.fullName}</h4>
+									<img class="avatar" src="{p.owner.avatar_url}" />
+								</header>
+								<p class="description">{p.description}</p>
+								<span class="stars">{p.stargazers_count}&#9733;</span>
+								<span class="language">{p.language}</span>
+							</div>
+						</a>
+					))}
+				</ul>
+			)}
+
+			<style jsx>{`
+				ul.projects div.card {
+					box-shadow: 5px 5px 3px #333b52;
+					padding: 0.7em;
+					background-color: white;
+					border-radius: 3px;
+					display: flex;
+					flex-direction: column;
+				}
+				ul.projects div.card header {
+					/* background-color: red; */
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+				}
+				ul.projects div.card:hover {
+					background-color: #e0e1e7;
+				}
+				ul.projects div.card h4:hover {
+					text-decoration: underline;
+				}
+			`}</style>
 		</div>
 	)
-}
-// function Github({ projects }){
-//     console.log(':: Github projects', projects)
-//     return <ul>
-//             { projects.map((project, index) => (
-//                 <li key={index}>
-//                     <Link as={`/p/${project.name}`} href={project.url}  target="_blank">
-//                         <a>
-//                             <div className="card">`
-//                                 <header>
-//                                     <h4 className="fullname">&#9874; {project.fullName}</h4>
-//                                     <img className="avatar" src={project.owner.avatar_url}/>
-//                                 </header>
-//                                 <p className="description">{project.description}</p>
-//                                 <span className="stars">{project.stargazers_count}&#9733;</span>
-//                                 <span className="language">{project.language}</span>
-//                             </div>
-//                         </a>
-//                     </Link>
-//                 </li>
-//             )) }
-//         </ul>
-// }
-
-Github.getInitialProps = async ({ req }) => {
-	console.log(req)
-	const res = await fetch(url)
-	console.log('res', res)
-	const projects = await res.json()
-	console.log('projects', projects)
-	const projectsCleaned = Providers.formatGithubResponse(projects)
-	console.log('projectsCleaned', projectsCleaned)
-	return {
-		projects,
-	}
 }
 
 export default Github
