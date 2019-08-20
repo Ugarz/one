@@ -2,7 +2,7 @@ import 'isomorphic-unfetch'
 import Link from 'next/link'
 
 import Providers from '../resources/helpers/providers'
-import Layout from '../components/Layout/Layout'
+import Layout from '../components/Layout'
 
 export default class extends React.Component {
 	render() {
