@@ -19,7 +19,7 @@
       text-transform: uppercase;
       display: flex;
       flex-direction: column;
-      padding: 5vw;
+      padding-top: 5vw;
       /* align-items: center; */
       /* justify-content: center; */
       /* top: 0; */
@@ -42,9 +42,4 @@
       content: "";
       background: rgba(48, 50, 57, 0.3);
       position: fixed;
-      top: 0.5vw;
-      right: 0.5vw;
-      bottom: 0.5vw;
-      left: 0.5vw;
-      z-index: -1;
     }

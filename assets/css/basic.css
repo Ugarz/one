@@ -145,14 +145,40 @@ ul.working-at {
     flex-direction: column;
     text-transform: none;
     align-self: center;
+    padding: 5vw 0;
   }
+  
   .projects-wrapper h3 {
     color: white;
     display: flex;
-    align-self: center;
-    padding: 3vh;
   }
-  
+  .other-projects {
+    padding: 4%;
+  }
+  .twitch-extension-goals {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+  }
+  .twitch-extension-goals .content p{
+    line-height: 1.6;
+  }
+  .twitch-extension-goals .content {
+    margin: 0 5%;
+    line-height: 1.4;
+  }
+  .twitch-extension-goals h3,
+  .twitch-extension-goals p,
+  .twitch-extension-goals a {
+    margin: 1em 0;
+  }
+  .twitch-extension-goals a {
+    color: #FBC032;
+    padding: .2em .5em;
+    background-color:#791e84;
+    border-radius: 3px;
+  }
   /* PROJECT LIST */
   
   ul.projects {
